@@ -129,7 +129,7 @@ namespace NgoThiThuyLinh_Buoi14
                 item1.Click += new EventHandler(item1_Click);
                 ToolStripItem item2 = contexMenuuu.Items.Add("Xóa giáo viên này");
                 item2.Click += new EventHandler(item2_Click);
-                contexMenuuu.Show(button1,new Point(e.X,e.Y));
+                contexMenuuu.Show(dgv_GV,new Point(e.X,e.Y));
             }
 
         }
