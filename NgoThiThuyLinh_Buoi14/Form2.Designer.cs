@@ -95,6 +95,7 @@
             this.dgv_GV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dgv_GV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dgv_GV.CellContextMenuStripChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgv_GV.ContextMenuStripChanged += new System.EventHandler(this.toolStripMenuItem1_Click);
             this.dgv_GV.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgv_GV_MouseClick);
             // 
             // button1

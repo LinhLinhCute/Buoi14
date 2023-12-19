@@ -27,7 +27,7 @@ namespace NgoThiThuyLinh_Buoi14
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
            //if(e.RowIndex>=0 && e.RowIndex < dgv_GV.Rows.Count)
-
+           //    DataGridViewRow selectRow = dgv_GV.Rows[e.RowIndex];
         }
         private void lOAD_ComboBox_CS()
         {
@@ -122,21 +122,32 @@ namespace NgoThiThuyLinh_Buoi14
         {
             if (e.Button == MouseButtons.Right)
             {
-                ContextMenu mn = new ContextMenu();
-                mn.MenuItems.Add(new MenuItem("Hiển thị thông tin chi tiết"));
-                mn.MenuItems.Add(new MenuItem("Xóa giáo viên này"));
-                int currentMouseOverRow = dgv_GV.HitTest(e.X, e.Y).RowIndex;
-                if (currentMouseOverRow >= 0)
-                {
-                    mn.MenuItems.Add(new MenuItem("Lua Chon"));
-                }
-                mn.Show(dgv_GV, new Point(e.X, e.Y));
+               
+                ContextMenuStrip contexMenuuu = new ContextMenuStrip();
+                
+                ToolStripItem item1 = contexMenuuu.Items.Add("Hiển thị thông tin chi tiết");
+                item1.Click += new EventHandler(item1_Click);
+                ToolStripItem item2 = contexMenuuu.Items.Add("Xóa giáo viên này");
+                item2.Click += new EventHandler(item2_Click);
+                contexMenuuu.Show(button1,new Point(e.X,e.Y));
             }
+
+        }
+        void item1_Click(object sender, EventArgs e)
+        {
+            ToolStripItem clickedItem = sender as ToolStripItem;
+            MessageBox.Show("Thong Tin");
+        }
+        void item2_Click(object sender, EventArgs e)
+        {
+            ToolStripItem clickedItem = sender as ToolStripItem;
+            MessageBox.Show("Xoa");
         }
 
+        
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         
